@@ -7,5 +7,7 @@ LABEL name="Triggermesh Operator" \
       summary="The Triggermesh Operator for Openshift" \
       description="This is the Triggermesh operator which provides an interface to Knative and Tekton"
 
+COPY ./licenses/* /licenses/
+
 COPY helm-charts/ ${HOME}/helm-charts/
 COPY watches.yaml ${HOME}/watches.yaml
