@@ -1,7 +1,8 @@
 # TriggerMesh Operator
 
-This is an Operator to install TriggerMesh This does not install Knative and
-Istio
+![TriggerMesh OpenShift Operator](./images/operator.png "TriggerMesh OpenShift Operator")
+
+This is a Kubernetes Operator to install TriggerMesh on OpenShift clusters.
 
 ## Pre-requisites
 
