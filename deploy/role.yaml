@@ -28,9 +28,7 @@ rules:
       - apps
     resources:
       - deployments
-      - daemonsets
       - replicasets
-      - statefulsets
   - verbs:
       - '*'
     apiGroups:
@@ -51,7 +49,7 @@ rules:
     resources:
       - deployments/finalizers
     resourceNames:
-      - operator
+      - triggermesh-operator
   - verbs:
       - '*'
     apiGroups:
@@ -65,7 +63,8 @@ rules:
     apiGroups:
       - route.openshift.io
     resources:
-      - '*'
+      - routes
+      - routes/custom-host
   - verbs:
       - get
       - list
@@ -118,4 +117,7 @@ rules:
       - subscriptions
       - taskruns
       - tasks
+      - triggermeshes
+      - triggermeshes/finalizers
+      - triggermeshes/status
       - triggers
