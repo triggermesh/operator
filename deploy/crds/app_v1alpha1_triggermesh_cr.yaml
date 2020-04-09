@@ -18,26 +18,6 @@ spec:
       enabled: true
       annotations:
         kubernetes.io/tls-acme: "true"
-  k8sAPI:
-    CA: |
-      -----BEGIN CERTIFICATE-----
-      MIIC6jCCAdKgAwIBAgIBATANBgkqhkiG9w0BAQsFADAmMSQwIgYDVQQDDBtvcGVu
-      c2hpZnQtc2lnbmVyQDE1NTQzMDQ3MDIwHhcNMTkwNDAzMTUxODIyWhcNMjQwNDAx
-      MTUxODIzWjAmMSQwIgYDVQQDDBtvcGVuc2hpZnQtc2lnbmVyQDE1NTQzMDQ3MDIw
-      ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDd/NHyQyCg6a65VywMe3TT
-      muam6XK3gd3iB9vPyTXnzYTx2IEc9vRG9kYmUwu5XE7ZsOXKNaT6Xez1FPhX1FfL
-      fKL9MC4n86sFRiT1zE2DfW6ycL6rJ2XaxmAe3HSw5q7FrgH9EWEC3lLPkO4Xygn+
-      0T8G3sdBNbPIK8LGLjb1RBeM8Tif1AUABehCY9eb9suY+zzU1/RJ9hY5Y1X4yI4l
-      5yotE3KzwL/aphiBiQGXajQLzPg7tFlE5qUuHRgo07Cqsyt9m89gVf8s3s3hfRPe
-      ttjA5dBnkjfaI8POJp71Nof2rXy2zaDG7QBkILrNozN1PJFH9f6+uCFKkJ8eg/Br
-      AgMBAAGjIzAhMA4GA1UdDwEB/wQEAwICpDAPBgNVHRMBAf8EBTADAQH/MA0GCSqG
-      SIb3DQEBCwUAA4IBAQCkSB7BiLxBsFIm/JkyoKBupB4MB4GIqNTs+Pxwus0Z2S0U
-      fW1QKh745nvNmHkXIaRyKh8dkIqIQDmUFo9FlxiS5zXxAe3F6OYmxAJ3sE24oA1m
-      noyDQ/TlaxLxLFfVo8q3fc/dIYlvyTMeFjoNb22ZClAHgXgwsxJIKhLl7J1Nux4N
-      q7nCj1tBff7WGNkzN0Wj7BTMLfCcUpTYXxtRq9gmaXXxWbFLV+B4ViYg1VNJ8VSZ
-      /DYgkGOKzO7Y9DFq90gVpat7+XNOGHDZtPP+IiTQZwyONxKT/b1UHJm2Q7iD23Yt
-      k302uCcbAC6JcP7+lCmH/X3ZgevgeAe715kwj8Lj
-      -----END CERTIFICATE-----
   secrets:
     auth0ClientId: <REDACTED>
     auth0ClientSecret: <REDACTED>

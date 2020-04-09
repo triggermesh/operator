@@ -39,14 +39,14 @@ unauthenticated registry at `knative.registry.svc.cluster.local` but it can be
 changed by setting backend env variables:
 
 - `REGISTRY_HOST` - docker registry domain, eg. `index.docker.io`
-- `REGISTRY_SECRET_NAME` - if specified, use this k8s secret to authenticate in
+- `REGISTRY_SECRET_NAME` - if specified, use this K8s secret to authenticate in
   registry
 
-k8s secret must be of `docker-registry` type. Also, since this secret is being
+The registry secret must be of type `docker-registry`. Also, since this secret is being
 used as both SA image pull secret and image push config for kaniko executor,
 creating `config.json` secret key with the same value may be required.
 
-Please be aware that provided registry secret will be copied to a user
+Please be aware that the provided registry secret will be copied to all user
 namespaces and eventually can be accessed by the user. Creating a dedicated
 profile and/or using an access token instead of your password may be a good
 idea.
@@ -56,7 +56,7 @@ idea.
 Kaniko project, which is being used in Triggermesh as an image builder, is
 having an [issue](https://github.com/GoogleContainerTools/kaniko/issues/105)
 with running in non-privileged containers. To make it work properly in
-Openshift, we're adding `anyuid` security permission for authenticated users:
+OpenShift, we're adding `anyuid` security permission for authenticated users:
 
 ```
 oc adm policy add-scc-to-group anyuid system:authenticated
@@ -95,6 +95,17 @@ kubectl create -f deploy/
 
 Note: This deploys the Operator into the namespace `default`. Please update the
 manifests if you want to deploy the Operator into another namespace.
+
+### Create image pull secret
+
+Create a pull secret named `docker-registry` in the operator's namespace. The secret name can be overridden with the `spec.backend.registrySecretName` variable of the CRD.
+
+```
+oc create secret docker-registry "docker-registry" \
+  --docker-password $password \
+  --docker-username $user \
+  --docker-server docker.io
+```
 
 ### Deploy TriggerMesh
 
