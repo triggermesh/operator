@@ -2,7 +2,9 @@
 
 ![TriggerMesh OpenShift Operator](./images/operator.png "TriggerMesh OpenShift Operator")
 
-This is a Kubernetes Operator to install TriggerMesh on OpenShift clusters.
+This is a Kubernetes Operator to install TriggerMesh on OpenShift clusters.Check the screencast below to get an overview of the installation on OKD
+
+[![](https://img.youtube.com/vi/MGsBo2LGdTQ/0.jpg)](https://www.youtube.com/embed/MGsBo2LGdTQ?start=20)
 
 ## Pre-requisites
 
