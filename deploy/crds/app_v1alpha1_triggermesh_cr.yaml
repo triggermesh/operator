@@ -1,24 +1,26 @@
 apiVersion: app.triggermesh.io/v1alpha1
 kind: TriggerMesh
 metadata:
-  name: example-triggermesh
+  name: triggermesh
 spec:
   frontend:
-    baseHost: cloud-test.tm.demo.vshn.net
+    baseHost: cloud.apps.triggermesh.openshift.openshiftcorp.com
+    auth0ClientId: 9hWJVLqmg34fNcKKsTKrXgjrqxmwVmCr
+    authApiId: mzRsnvwbKqxCdCwd4gjwPj7VRx7x93CX
+    authDomain: triggermesh-demo.us.auth0.com
     route:
-      enabled: true
       annotations:
         kubernetes.io/tls-acme: "true"
-    authApiId: <REDACTED>
-    auth0ClientId: <REDACTED>
-    sentryDSN: https://<REDACTED>@sentry.io/
+      enabled: true
+
   backend:
-    baseHost: app-test.tm.demo.vshn.net
+    baseHost: api.apps.triggermesh.openshift.openshiftcorp.com
+    auth0_url: https://triggermesh-demo.us.auth0.com
     route:
       enabled: true
       annotations:
         kubernetes.io/tls-acme: "true"
   secrets:
-    auth0ClientId: <REDACTED>
-    auth0ClientSecret: <REDACTED>
-    gitHookSecret: <REDACTED>
+    auth0ClientId: mzRsnvwbKqxCdCwd4gjwPj7VRx7x93CX
+    auth0ClientSecret: 7wP7ftVHCWRgr3XCq4hmJTCK7VMb79LPszdkHKsXfCX3RfqnXbF7CLxJkxbxtdcT
+    gitHookSecret: qHrrCWm4chvJMJFdhcNXggKgbVNKVH4r
