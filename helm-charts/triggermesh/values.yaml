@@ -17,13 +17,13 @@ knative:
   manageConfigDomain: false
 
 frontend:
-  baseHost: cloud.tm.demo.vshn.net
+  baseHost: cloud.apps.tm.clusters.openshiftcorp.com
   authDomain: triggermesh.auth0.com
   authApiId: # Auth0 ID
   sentryDSN: # https://<id>@sentry.io/id
   replicaCount: 3
   image: triggermesh/tmfront
-  tag: v0.0.3
+  tag: v0.3.0
 
   ingress:
     enabled: false
@@ -39,10 +39,10 @@ frontend:
     tls: true
 
 backend:
-  baseHost: app.tm.demo.vshn.net
+  baseHost: app.apps.tm.clusters.openshiftcorp.com
   replicaCount: 3
   image: triggermesh/tmback
-  tag: v0.0.4
+  tag: v0.0.3
   paths:
     - /deregister
     - /pushEvent
