@@ -1,7 +1,7 @@
 apiVersion: app.triggermesh.io/v1alpha1
 kind: TriggerMesh
 metadata:
-  name: triggermesh
+  name: example-triggermesh
 spec:
   frontend:
     baseHost: cloud.apps.triggermesh.openshift.openshiftcorp.com
