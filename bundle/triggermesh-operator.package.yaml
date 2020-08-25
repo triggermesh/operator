@@ -1,4 +1,5 @@
-packageName: triggermesh-operator
 channels:
-  - name: alpha
-    currentCSV: triggermesh-operator.v0.3.0
+  - currentCSV: triggermesh-operator.v0.3.0
+    name: alpha
+defaultChannel: alpha
+packageName: triggermesh-operator

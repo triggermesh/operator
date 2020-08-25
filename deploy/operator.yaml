@@ -16,7 +16,7 @@ spec:
       serviceAccountName: triggermesh-operator
       containers:
         - name: triggermesh-operator
-          image: gcr.io/triggermesh/operator:latest
+          image: gcr.io/triggermesh/operator:v0.1.0
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
